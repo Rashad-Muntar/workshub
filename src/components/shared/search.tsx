@@ -30,6 +30,7 @@ const Search = ({ style, inputStyle, showIcon=true, placeholder }: Props) => {
         <Input
           type="text"
           placeholder={placeholder}
+          variant='flushed'
           id="search"
           name="search"
           onChange={formik.handleChange}

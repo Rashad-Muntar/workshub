@@ -18,7 +18,6 @@ const SideBar = () => {
         <p>Search within jobs</p>
         <Search
           showIcon={false}
-          style="border-2 border-b-background"
           placeholder="Type to search"
         />
       </div>
@@ -27,10 +26,9 @@ const SideBar = () => {
         <p>Tags</p>
         <Search
           showIcon={false}
-          style="border-2 border-b-background"
           placeholder="Type to search tags"
         />
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mt-6">
           {stacks.map((stack, index) => (
             <Button title={stack} styles={locationStyles} key={index} />
           ))}
@@ -46,10 +44,9 @@ const SideBar = () => {
         />
         <Search
           showIcon={false}
-          style="border-2 border-b-background"
           placeholder="Type to search location"
         />
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mt-6">
           {locations.map((location, index) => (
             <Button title={location} styles={locationStyles} key={index} />
           ))}
@@ -76,7 +73,7 @@ const SideBar = () => {
           <RadioCard placeholder="Yealy" value="1" />
           <RadioCard placeholder="Daily" value="2" />
         </div>
-        <div className="flex items-center justify-between border-2">
+        <div className="flex items-center justify-between">
           <SelectInput />
           <p className="w-[50%] flex justify-end">$25k -- $100k</p>
         </div>

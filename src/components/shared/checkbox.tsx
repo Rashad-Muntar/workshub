@@ -11,7 +11,7 @@ function CheckboxCard({placeholder, icon}: Props) {
  
 
   return (
-    <Checkbox isInvalid>
+    <Checkbox size='lg'>
     <div className="flex items-center">
       <p className="mr-2">{placeholder}</p>
       {icon}
