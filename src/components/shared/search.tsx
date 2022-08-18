@@ -4,7 +4,7 @@ import { PhoneIcon } from '@chakra-ui/icons'
 import { useFormik } from 'formik'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FiSearch } from 'react-icons/Fi'
+import { FiSearch } from 'react-icons/fi'
 
 interface Props {
   style: string

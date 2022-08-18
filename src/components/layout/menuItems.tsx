@@ -4,8 +4,8 @@ import {
   AiOutlineCaretDown,
   AiOutlineFile,
   AiOutlinePlusCircle,
-} from 'react-icons/Ai'
-import { BsGrid } from 'react-icons/Bs'
+} from 'react-icons/ai'
+import { BsGrid } from 'react-icons/bs'
 import { BiBot, BiBookmark } from 'react-icons/bi'
 
 BsGrid

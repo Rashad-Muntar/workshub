@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BiBot } from 'react-icons/bi'
 import { BsChat } from 'react-icons/bs'
-import { AiOutlineCaretDown } from 'react-icons/Ai'
+import { AiOutlineCaretDown } from 'react-icons/ai'
 
 import {
   faVolleyball,

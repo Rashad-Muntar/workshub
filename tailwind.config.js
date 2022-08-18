@@ -24,6 +24,7 @@ module.exports = {
         500: '#5EA62E',
       },
       background: '#e6edf2',
+      btnBg: "#454E54",
       white: '#ffffff',
     },
   },

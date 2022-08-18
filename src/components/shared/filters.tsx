@@ -1,8 +1,8 @@
 import Button from './button'
-import { AiOutlineFileText, AiOutlineUnorderedList } from 'react-icons/Ai'
-import { BsGrid } from 'react-icons/Bs'
+import { AiOutlineFileText, AiOutlineUnorderedList } from 'react-icons/ai'
+import { BsGrid } from 'react-icons/bs'
 import { BiBot, BiBookmark } from 'react-icons/bi'
-import { FiFilter } from 'react-icons/Fi'
+import { FiFilter } from 'react-icons/fi'
 
 const Filters = () => {
   return (
