@@ -4,6 +4,7 @@ import Navbar from '../src/components/layout/navbar'
 import styles from '../styles/Home.module.css'
 import MainWrapper from '../src/components/shared/mainWrapper'
 import Filters from '../src/components/shared/filters'
+import SideBar from '../src/components/layout/sideBar'
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -18,7 +19,7 @@ const Home: NextPage = () => {
           <MainWrapper>
             <Filters />
             <div className='flex'>
-
+              <SideBar />
             </div>
           </MainWrapper>
       </main>

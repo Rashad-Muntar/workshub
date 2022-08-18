@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import { PhoneIcon } from '@chakra-ui/icons'
 import { useFormik } from 'formik'
@@ -8,9 +9,12 @@ import { FiSearch } from 'react-icons/Fi'
 interface Props {
   style: string
   inputStyle: string
+  showIcon?:boolean
+  placeholder:string
 }
 
-const Search = ({ style, inputStyle }: Props) => {
+const Search = ({ style, inputStyle, showIcon=true, placeholder }: Props) => {
+
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -22,10 +26,10 @@ const Search = ({ style, inputStyle }: Props) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className={style}>
-        <FiSearch fontSize={30} className="text-background pr-3 box-content" />
+       {showIcon && <FiSearch fontSize={30} className="text-background pr-3 box-content" /> }
         <Input
           type="text"
-          placeholder="Search..."
+          placeholder={placeholder}
           id="search"
           name="search"
           onChange={formik.handleChange}

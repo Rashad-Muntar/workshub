@@ -33,6 +33,7 @@ const Navbar = () => {
           <Search
             style="border-2 border-background h-full items-center hidden md:inline-flex"
             inputStyle="w-full h-full"
+            placeholder='Search...'
           />
           <Search
             style="border-2 border-background  h-full items-center inline-flex md:hidden"
