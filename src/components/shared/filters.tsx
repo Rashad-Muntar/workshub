@@ -6,7 +6,7 @@ import { FiFilter } from 'react-icons/fi'
 
 const Filters = () => {
   return (
-    <div className="w-full flex justify-between my-6">
+    <div className="w-full flex justify-between mb-6">
       <div className="flex flex-wrap">
         <Button
           title="All jobs"

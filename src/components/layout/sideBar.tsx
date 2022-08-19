@@ -19,6 +19,7 @@ const SideBar = () => {
         <Search
           showIcon={false}
           placeholder="Type to search"
+          variant='flushed'
         />
       </div>
 
@@ -27,6 +28,7 @@ const SideBar = () => {
         <Search
           showIcon={false}
           placeholder="Type to search tags"
+          variant='flushed'
         />
         <div className="flex flex-wrap mt-6">
           {stacks.map((stack, index) => (
@@ -37,14 +39,11 @@ const SideBar = () => {
 
       <div className="mb-8">
         <p>Location</p>
-
-        <input
-          type="checkbox"
-          class="appearance-none indeterminate:bg-gray-300 ..."
-        />
+        
         <Search
           showIcon={false}
           placeholder="Type to search location"
+          variant='flushed'
         />
         <div className="flex flex-wrap mt-6">
           {locations.map((location, index) => (

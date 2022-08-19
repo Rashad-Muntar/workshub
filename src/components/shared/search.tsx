@@ -7,13 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FiSearch } from 'react-icons/fi'
 
 interface Props {
-  style: string
-  inputStyle: string
+  style?: string
   showIcon?:boolean
   placeholder:string
+  variant?:string
 }
 
-const Search = ({ style, inputStyle, showIcon=true, placeholder }: Props) => {
+const Search = ({ style, variant, showIcon=true, placeholder }: Props) => {
 
   const formik = useFormik({
     initialValues: {
@@ -26,19 +26,16 @@ const Search = ({ style, inputStyle, showIcon=true, placeholder }: Props) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className={style}>
-       {showIcon && <FiSearch fontSize={30} className="text-background pr-3 box-content" /> }
-        <Input
-          type="text"
-          placeholder={placeholder}
-          variant='flushed'
-          id="search"
-          name="search"
-          onChange={formik.handleChange}
-          value={formik.values.email}
-          // style={inputStyle}
-          className={inputStyle}
-        />
+      <InputGroup>
+     { showIcon && <InputLeftElement
+      pointerEvents='none'
+      children={<FiSearch fontSize={30} className="text-background pr-3 box-content" />}
+    />
+     }
+    <Input id="search" name="search" value={formik.values.email} onChange={formik.handleChange} variant={variant} type='text' placeholder={placeholder} />
+  </InputGroup>
       </div>
+     
     </form>
   )
 }

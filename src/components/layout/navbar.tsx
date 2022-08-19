@@ -31,26 +31,27 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <div className="hidden sm:inline-flex h-full">
           <Search
-            style="border-2 border-background h-full items-center hidden md:inline-flex"
+            style=" h-full items-center hidden md:inline-flex"
             inputStyle="w-full h-full"
             placeholder='Search...'
           />
           <Search
-            style="border-2 border-background  h-full items-center inline-flex md:hidden"
+            style=" h-full items-center inline-flex md:hidden"
             inputStyle="w-full h-full"
+            placeholder='Search...'
           />
           <Button
             title="Write Article"
-            styles="bg-primary-default w-[rem] whitespace-nowrap text-white px-[32px] ml-3 rounded-md py-[10px] hidden lg:block "
+            styles="border-[1px] border-primary-default bg-primary-default hover:bg-primary-100 hover:text-primary-default text-white px-[32px] ml-3 rounded-md py-[10px] hidden lg:block "
           />
           <Button
             title="Write Article"
-            styles="bg-primary-default w-[10rem] whitespace-nowrap text-white px-[32px] rounded-md py-[10px] inline-flex md:hidden"
+            styles="bg-primary-default hover:bg-primary-100 text-white px-[32px] rounded-md py-[10px] inline-flex md:hidden"
           />
         </div>
-        <BsChat fontSize={40} className="mx-6" />
+        <BsChat className="mx-6 w-[23px] h-[23px]" />
         <div className="flex items-center">
-          <BiBot fontSize={40} className="bg-primary-default text-white rounded-full box-content p-3 "/>
+          <BiBot className="bg-primary-default text-white rounded-full p-1 w-[48px] h-[48px]"/>
           <AiOutlineCaretDown className="m-3 hidden lg:inline-flex" />
         </div>
         <FontAwesomeIcon
