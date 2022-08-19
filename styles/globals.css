@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.body{
+/* .body{
     background-color: #e6edf2;
-  }
+  } */
 
   .css-us0ay6{
     background: #ef8374 !important;
@@ -13,4 +13,35 @@
   .css-yy5vui{
     outline: 2px solid #ef8374 !important
   }
+
+
+  .MyCustomSearchBox {
+    display: flex;
+    white-space: nowrap;
+  }
+
+
+  .ais-SearchBox-submitIcon, .ais-SearchBox-loadingIcon, .ais-SearchBox-reset{
+    display: none;
+  }
+ 
+  .ais-SearchBox-input{
+    height: 40px;
+    padding-left: 15px;
+  }
+  .ais-SearchBox-input:focus{
+    outline: none;
+  }
+
+ .ais-Hits-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+ .ais-Hits-item{
+  width: 49.2% !important;
+  margin-bottom: 17px;
+ }
+  
   

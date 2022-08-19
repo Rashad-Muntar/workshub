@@ -6,14 +6,16 @@ import { TbCertificate2 } from 'react-icons/tb'
 import RadioCard from '../shared/radio'
 import SelectInput from '../shared/select'
 import SliderInput from '../shared/SliderInput'
+import { SearchBox } from 'react-instantsearch-hooks-web'
 
 import CheckboxCard from '../shared/checkbox'
 
 const SideBar = () => {
-  let locationStyles = 'bg-secondary-50 text-secondary-500 font-medium m-0.5'
+  let locationStyles = 'bg-secondary-50 opacity-30 text-secondary-500 font-medium m-0.5'
+  let stackStyles = 'bg-primary-100 text-primary-default opacity-30 font-medium m-0.5 px-1 rounded-sm'
   //   const [currentValue, setCurrentValue] = useState('')
   return (
-    <div className="bg-white py-5 px-4">
+    <div className="bg-white py-5 px-4 w-[25%]">
       <div className="mb-8">
         <p>Search within jobs</p>
         <Search
@@ -32,7 +34,7 @@ const SideBar = () => {
         />
         <div className="flex flex-wrap mt-6">
           {stacks.map((stack, index) => (
-            <Button title={stack} styles={locationStyles} key={index} />
+            <Button title={stack} styles={stackStyles} key={index} />
           ))}
         </div>
       </div>
