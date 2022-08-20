@@ -15,7 +15,7 @@ const SideBar = () => {
   let stackStyles = 'bg-primary-100 text-primary-default opacity-30 font-medium m-0.5 px-1 rounded-sm'
   //   const [currentValue, setCurrentValue] = useState('')
   return (
-    <div className="bg-white py-5 px-4 w-[25%]">
+    <div className="bg-white py-5 px-4">
       <div className="mb-8">
         <p>Search within jobs</p>
         <Search

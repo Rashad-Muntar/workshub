@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Button from './button'
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai'
 import { BiBookmark } from 'react-icons/bi'
@@ -9,10 +8,10 @@ const JobCard = ({ hit }) => {
     'bg-primary-100 text-primary-default  font-medium m-0.5 px-1'
   let remoteStyles =
     'bg-secondary-100 items-center text-secondary-default px-2 font-medium m-0.5'
-  console.log(hit)
+
   return (
-    <div className="relative bg-white rounded-lg p-6 shadow-md min-h-[18rem]">
-      <div className="flex">
+    <div className="flex flex-col justify-between h-[100%]">
+      <div className=" flex">
         <div className="mr-6">
           <img src={hit.company.logo} alt="" className="w-12" />
         </div>
@@ -20,22 +19,25 @@ const JobCard = ({ hit }) => {
         <div>
           <p className="font-bold">{hit.title}</p>
           <small>
-            {hit.company.name}, {hit.location?.country}Location
+            {hit.company.name}, {hit.location?.country}
           </small>
         </div>
-      </div>
-      <div className="flex flex-wrap my-3">
+      </div >
+      <div className="">
+      <div className="flex flex-wrap">
         {hit.tags.map((tag) => (
           <Button title={tag.label} styles={locationStyles} />
         ))}
       </div>
 
-      <div className='w-full relative'>
-        <small className=" whitespace-pre-wrap border-2 md:text-ellipsis overflow-hidden">
+      <div className='w-full'>
+        <small className="description">
           {hit.description.substring(0, 90)}
         </small>
       </div>
+      </div>
 
+      <div className="">
       <div className="flex  w-[80%] flex-wrap">
         <p>
           ${hit.remuneration?.min}-{hit.remuneration?.max} + Equity
@@ -52,18 +54,18 @@ const JobCard = ({ hit }) => {
         </div>
       </div>
       <div className="flex flex-wrap my-3">
-        {hit.remote === true ? (
+        {hit.remote === true &&
           <Button title="Remote" styles={remoteStyles} leftIcon={<FiGlobe />} /> 
-        ):
-          <Button />
+        
         }
       </div>
-
+      </div >
+      <div className="">
       <div className="flex justify-between items-center">
-        <BiBookmark className="w-[16px] h-[20px]" />
-        <div className="flex items-center">
+        <BiBookmark className='w-[23px] h-[23px]'/>
+        <div className="flex ">
           <Button
-            title="Apply"
+            title="More info"
             styles="border-primary-default border-[1px] hover:bg-primary-100 text-primary-default px-[32px] rounded-md py-[10px]"
           />
           <Button
@@ -71,6 +73,7 @@ const JobCard = ({ hit }) => {
             styles="bg-primary-default hover:bg-primary-100 text-white px-[32px] rounded-md py-[10px] ml-4"
           />
         </div>
+      </div>
       </div>
     </div>
   )

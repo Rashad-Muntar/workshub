@@ -8,7 +8,7 @@ import SideBar from '../src/components/JobsBoard/sideBar'
 import JobsList from '../src/components/shared/jobsList'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, Hits, Highlight } from 'react-instantsearch-hooks-web'
-
+import MainSection from '../src/components/JobsBoard/mainSection'
 const searchClient = algoliasearch(
   'MVK698T35T',
   '16892df9d986a3976fbf0e13047d6d1b'
@@ -27,9 +27,10 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <MainWrapper>
             <Filters />
-            <div className="flex justify-between">
-              <SideBar />
-              <JobsList />
+            <MainSection />
+            <div className="">
+              {/* <SideBar />
+              <JobsList /> */}
             </div>
           </MainWrapper>
         </main>
