@@ -6,19 +6,18 @@ import { TbCertificate2 } from 'react-icons/tb'
 import RadioCard from '../shared/radio'
 import SelectInput from '../shared/select'
 import SliderInput from '../shared/SliderInput'
-import { SearchBox } from 'react-instantsearch-hooks-web'
-import { Box } from '@chakra-ui/react'
+import { Box, Text, Flex } from '@chakra-ui/react'
 
 import CheckboxCard from '../shared/checkbox'
 
 const SideBar = () => {
   let locationStyles = 'bg-secondary-50 opacity-30 text-secondary-500 font-medium m-0.5'
   let stackStyles = 'bg-primary-100 text-primary-default opacity-30 font-medium m-0.5 px-1 rounded-sm'
-  //   const [currentValue, setCurrentValue] = useState('')
+  
   return (
-    <Box className="bg-white py-5 px-4">
-      <Box className="mb-8">
-        <p>Search within jobs</p>
+    <Box bg="primary.white" py="20px" px="16px">
+      <Box mb="32px">
+        <Text mb="16px" fontWeight="medium">Search within jobs</Text>
         <Search
           showIcon={false}
           placeholder="Type to search"
@@ -27,35 +26,35 @@ const SideBar = () => {
       </Box>
 
       <Box className="mb-8">
-        <p>Tags</p>
+        <Text mb="16px">Tags</Text>
         <Search
           showIcon={false}
           placeholder="Type to search tags"
           variant='flushed'
         />
-        <Box className="flex flex-wrap mt-6">
+        <Flex className="flex-wrap mt-6">
           {stacks.map((stack, index) => (
             <Button title={stack} styles={stackStyles} key={index} />
           ))}
-        </Box>
+        </Flex>
       </Box>
 
       <Box className="mb-8">
-        <p>Location</p>
+        <Text mb="16px">Location</Text>
         
         <Search
           showIcon={false}
           placeholder="Type to search location"
           variant='flushed'
         />
-        <Box className="flex flex-wrap mt-6">
+        <Flex className="flex flex-wrap mt-6">
           {locations.map((location, index) => (
             <Button title={location} styles={locationStyles} key={index} />
           ))}
-        </Box>
+        </Flex>
       </Box>
 
-      <Box className="mb-8 flex flex-col">
+      <Flex className="mb-8 flex flex-col">
         <CheckboxCard
           placeholder="Remote"
           icon={<FiGlobe className="text-secondary-default" />}
@@ -64,32 +63,32 @@ const SideBar = () => {
           placeholder="Sponsorship offered"
           icon={<TbCertificate2 className="text-secondary-default" />}
         />
-      </Box>
+      </Flex>
 
       <Box className="mb-8">
-        <Box className="flex justify-between">
-          <p>Compensation</p>
+        <Flex className="flex justify-between">
+          <Text>Compensation</Text>
           <small>Clear</small>
-        </Box>
+        </Flex>
         <Box className="flex justify-between">
           <RadioCard placeholder="Yealy" value="1" />
           <RadioCard placeholder="Daily" value="2" />
         </Box>
-        <Box className="flex items-center justify-between">
+        <Flex className="flex items-center justify-between">
           <SelectInput />
-          <p className="w-[50%] flex justify-end">$25k -- $100k</p>
-        </Box>
+          <Text className="w-[50%] flex justify-end">$25k -- $100k</Text>
+        </Flex>
         <SliderInput />
         <CheckboxCard placeholder="Display 'Competitive'" />
       </Box>
 
       <Box className="mb-8">
-        <p>Role type</p>
-        <Box className='flex flex-col'>
+        <Text>Role type</Text>
+        <Flex className='flex-col'>
           <CheckboxCard placeholder="Full time" />
           <CheckboxCard placeholder="Contract" />
           <CheckboxCard placeholder="Intern" />
-        </Box>
+        </Flex>
       </Box>
       <Button title='Apply-filter' styles='flex items-center justify-center w-full bg-btnBg text-white h-[42px]'/>
       <Button title='Apply-filter' styles='flex items-center justify-center w-full text-btnBg h-[42px] mt-12'/>

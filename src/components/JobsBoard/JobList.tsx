@@ -1,18 +1,13 @@
-import Button from './button'
-import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai'
-import { BiBookmark } from 'react-icons/bi'
-import { FiGlobe } from 'react-icons/fi'
-import { Box, Grid, GridItem } from '@chakra-ui/react'
-import { connectHits } from 'react-instantsearch-dom'
-import { Index, useHits, UseHitsProps } from 'react-instantsearch-hooks-web'
+import { Grid } from '@chakra-ui/react'
+import { useHits, UseHitsProps } from 'react-instantsearch-hooks-web'
 import JobCard from '../shared/jobCard'
 
 const JobList = (props: UseHitsProps) => {
   const { hits } = useHits(props)
 
-  hits.map((hit) => {
-    console.log(hit)
-  })
+  // hits.map((hit) => {
+  //   console.log(hit)
+  // })
 
   return (
     <Grid templateColumns='repeat(2, 1fr)' gap={3}>

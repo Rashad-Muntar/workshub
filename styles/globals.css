@@ -6,9 +6,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body{
-  color: #4a4a4a !important;
+  color: #728088 !important;
   background-color: #e6edf2 !important;
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
 .css-us0ay6 {
   background: #ef8374 !important;
@@ -33,30 +34,9 @@ body{
   height: 40px;
   padding-left: 15px;
 }
+
 .ais-SearchBox-input:focus {
   outline: none;
-}
-
-.ais-Hits{
-  width: auto !important;
-  border: 3px solid red;
-}
-
-.ais-Hits-list {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 0.8rem;
-  width: auto !important;
-  border: 3px solid blue;
-}
-
-.ais-Hits-item {
-  padding: 24px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  width: auto !important;
-  min-width: none !important;
 }
 
 .card-head {
@@ -99,14 +79,4 @@ body{
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 1060px) {
-  .ais-Hits-list {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .ais-Hits-item {
-  }
-}
 

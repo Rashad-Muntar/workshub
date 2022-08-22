@@ -1,7 +1,5 @@
-import { Grid, GridItem, useMediaQuery, Show, Box } from '@chakra-ui/react'
+import { Grid, GridItem, useMediaQuery, Show } from '@chakra-ui/react'
 import SideBar from './sideBar'
-// import CustomHits from '../shared/jobCard'
-// import { Hits } from 'react-instantsearch-hooks-web'
 import JobList from './JobList'
 
 const MainSection = () => {
