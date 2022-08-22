@@ -1,66 +1,80 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* .body{
-    background-color: #e6edf2;
-  } */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-  .css-us0ay6{
-    background: #ef8374 !important;
-  }
+body{
+  color: #4a4a4a !important;
+  background-color: #e6edf2 !important;
+  font-family: 'Montserrat', sans-serif;
+}
+.css-us0ay6 {
+  background: #ef8374 !important;
+}
 
-  .css-yy5vui{
-    outline: 2px solid #ef8374 !important
-  }
+.css-yy5vui {
+  outline: 2px solid #ef8374 !important;
+}
 
+.MyCustomSearchBox {
+  display: flex;
+  white-space: nowrap;
+}
 
-  .MyCustomSearchBox {
-    display: flex;
-    white-space: nowrap;
-  }
+.ais-SearchBox-submitIcon,
+.ais-SearchBox-loadingIcon,
+.ais-SearchBox-reset {
+  display: none;
+}
 
+.ais-SearchBox-input {
+  height: 40px;
+  padding-left: 15px;
+}
+.ais-SearchBox-input:focus {
+  outline: none;
+}
 
-  .ais-SearchBox-submitIcon, .ais-SearchBox-loadingIcon, .ais-SearchBox-reset{
-    display: none;
-  }
- 
-  .ais-SearchBox-input{
-    height: 40px;
-    padding-left: 15px;
-  }
-  .ais-SearchBox-input:focus{
-    outline: none;
-  }
+.ais-Hits{
+  width: auto !important;
+  border: 3px solid red;
+}
 
- .ais-Hits-list{
+.ais-Hits-list {
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: .8rem;
- }
+  gap: 0.8rem;
+  width: auto !important;
+  border: 3px solid blue;
+}
 
- .ais-Hits-item{
-      padding: 24px;
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
- }
+.ais-Hits-item {
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  width: auto !important;
+  min-width: none !important;
+}
 
- .card-head{
+.card-head {
   display: grid;
-    grid-template-columns: 40px 1fr;
-    grid-template-rows: fit-content(100px) fit-content(35px);
-    grid-column-gap: 16px;
- }
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: fit-content(100px) fit-content(35px);
+  grid-column-gap: 16px;
+}
 
- .stacks-section{
+.stacks-section {
   grid-row: 2;
-    grid-column: 1/4;
-    max-height: 66px;
-    margin-bottom: 16px;
-    margin-top: 6px;
- }
+  grid-column: 1/4;
+  max-height: 66px;
+  margin-bottom: 16px;
+  margin-top: 6px;
+}
 
- .description {
+.description {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   display: -webkit-box;
@@ -69,6 +83,30 @@
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 16px;
- }
-  
-  
+}
+
+.card-title{
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  min-height: 24px;
+  color: #454E54;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1060px) {
+  .ais-Hits-list {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .ais-Hits-item {
+  }
+}
+

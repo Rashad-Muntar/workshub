@@ -10,7 +10,7 @@ const Filters = () => {
       <div className="flex flex-wrap">
         <Button
           title="All jobs"
-          styles="bg-primary-text mr-3 sm:mr-0 text-white flex items-center my-1 h-10 px-6 font-semibold"
+          styles="bg-primary-text mr-3 sm:mr-0 text-white  flex items-center my-1 h-10 px-6 font-semibold"
           leftIcon={<BsGrid />}
         />
         <Button

@@ -17,6 +17,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/react-instantsearch-dom": "^6.12.3",
     "algoliasearch": "^4.14.2",
     "autoprefixer": "^10.4.8",
     "formik": "^2.2.9",
@@ -27,6 +28,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-instantsearch": "^6.31.1",
+    "react-instantsearch-dom": "^6.31.1",
     "react-instantsearch-hooks-web": "^6.31.1",
     "yup": "^0.32.11"
   },

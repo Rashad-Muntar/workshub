@@ -2,20 +2,21 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../src/components/layout/navbar'
 import styles from '../styles/Home.module.css'
-import MainWrapper from '../src/components/shared/mainWrapper'
 import Filters from '../src/components/shared/filters'
-import SideBar from '../src/components/JobsBoard/sideBar'
-import JobsList from '../src/components/shared/jobsList'
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch, Hits, Highlight } from 'react-instantsearch-hooks-web'
+import { InstantSearch } from 'react-instantsearch-hooks-web'
 import MainSection from '../src/components/JobsBoard/mainSection'
+import { Box } from '@chakra-ui/react'
+
+
 const searchClient = algoliasearch(
   'MVK698T35T',
   '16892df9d986a3976fbf0e13047d6d1b'
 )
+
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <Box className={styles.container}>
       <InstantSearch searchClient={searchClient} indexName="jobs">
         <Navbar />
         {/* // <Head>
@@ -25,17 +26,12 @@ const Home: NextPage = () => {
       // </Head> */}
 
         <main className={styles.main}>
-          <MainWrapper>
             <Filters />
             <MainSection />
-            <div className="">
-              {/* <SideBar />
-              <JobsList /> */}
-            </div>
-          </MainWrapper>
         </main>
+       
       </InstantSearch>
-    </div>
+    </Box>
   )
 }
 
