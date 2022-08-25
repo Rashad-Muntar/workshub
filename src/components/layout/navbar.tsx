@@ -1,26 +1,24 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BiBot } from 'react-icons/bi'
 import { FiSearch } from 'react-icons/fi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { BsChat } from 'react-icons/bs'
 import { AiOutlineCaretDown } from 'react-icons/ai'
+import { TbBallFootball } from 'react-icons/tb'
 import { SearchBox } from 'react-instantsearch-hooks-web'
-import { faVolleyball, faBars } from '@fortawesome/free-solid-svg-icons'
-import Button from '../shared/button'
+import Customebutton from '../shared/button'
 import MenuItems from './menuItems'
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center px-3 h-24 bg-white">
+    <div className="flex justify-between items-center px-3 h-24 bg-white w-full">
       <div className="flex w-[40%] justify-between h-full">
         <div className="flex items-center mr-12">
-          <FontAwesomeIcon
-            icon={faVolleyball}
-            fontSize={35}
-            className="text-primary-default"
-          />
-          <div className=" ml-3">
-            <p className="m-0 p-0 font-bold">FUNCTIONAL</p>
-            <small className="m-0 p-0">WORKS</small>
+          <TbBallFootball fontSize={47} className="text-primary-default" />
+          <div className=" ml-1">
+            <p className="m-0 p-0 font-bold leading-none text-[12px]">
+              FUNCTIONAL
+            </p>
+            <small className="m-0 p-0 leading-none">WORKS</small>
           </div>
         </div>
 
@@ -28,7 +26,7 @@ const Navbar = () => {
           <MenuItems />
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex w-[65%] pl-[30px] justify-end items-center">
         <div className="hidden sm:inline-flex h-full">
           <div className="hidden md:inline-flex flex border-[1px] border-background hover:shadow-sm items-center pl-1">
             <FiSearch fontSize={22} className="text-text " />
@@ -38,25 +36,28 @@ const Navbar = () => {
             <FiSearch fontSize={22} className="text-text " />
             <SearchBox className="MyCustomSearchdiv" searchAsYouType={false} />
           </div>
-          <Button
+          <Customebutton
+            size="medium"
+            variant="primary"
             title="Write Article"
-            styles="border-[1px] border-primary-default bg-primary-default hover:bg-primary-100 hover:text-primary-default text-white px-[32px] ml-3 rounded-md py-[10px] hidden lg:block "
+            styles="hidden lg:block "
           />
-          <Button
+          <Customebutton
+            size="medium"
+            variant="primary"
             title="Write Article"
-            styles="bg-primary-default hover:bg-primary-100 text-white px-[32px] rounded-md py-[10px] inline-flex md:hidden"
+            styles="inline-flex md:hidden"
           />
         </div>
-        <BsChat className="mx-6 w-[23px] h-[23px]" />
+        <BsChat className="ml-4 mr-3" fontSize="23px" />
         <div className="flex items-center">
-          <BiBot className="bg-primary-default text-white rounded-full p-1 w-[48px] h-[48px]" />
+          <BiBot
+            fontSize="35px"
+            className="bg-primary-default text-white rounded-full p-1"
+          />
           <AiOutlineCaretDown className="m-3 hidden lg:inline-flex" />
         </div>
-        <FontAwesomeIcon
-          icon={faBars}
-          className="block lg:hidden ml-3"
-          fontSize={25}
-        />
+        <GiHamburgerMenu className="block lg:hidden ml-3" fontSize={24} />
       </div>
     </div>
   )

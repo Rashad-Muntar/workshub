@@ -1,10 +1,13 @@
 import { Select } from "@chakra-ui/react"
+import { currency } from "./filterData"
 const SelectInput = () => {
   return (
-    <Select placeholder="Select option" className="my-3">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
+    <Select placeholder="Select option" bg="primary.background">
+      {
+        currency.map((symbol, index) => (
+          <option key={index} value={symbol}>{symbol}</option>
+        ))
+      }
     </Select>
   )
 }

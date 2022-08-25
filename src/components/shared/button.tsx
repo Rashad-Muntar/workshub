@@ -1,21 +1,42 @@
+import { Button } from '@chakra-ui/react'
+
 interface Props {
-  title: string
+  title?: string
   handler?: () => void
   styles?: string
   leftIcon?: string
   rightIcon?: string
+  size?: string
+  variant?: string
+  margin?: string
+  color?: string
 }
-const Button = ({ title, handler, styles, leftIcon, rightIcon }: Props) => {
-  
+const Customebutton = ({
+  color,
+  // margin,
+  size,
+  variant,
+  title,
+  handler,
+  styles,
+  leftIcon,
+  rightIcon,
+}: Props) => {
   return (
-    <div className={`${styles} flex whitespace-nowrap`}>
-     {leftIcon && <div className="mr-3 text-xl">{leftIcon}</div> }
-      <button type="submit" onClick={handler}>
-        {title}
-      </button>
-      {rightIcon && <div>{rightIcon}</div> }
+    <div className={styles}>
+      <Button
+        color={color}
+        variant={variant}
+        size={size}
+        onClick={handler}
+        w="100%"
+      >
+        {leftIcon && <div className="mr-1 text-[16px] text-xl">{leftIcon}</div>}
+        {title?.toUpperCase()}
+        {rightIcon && <div>{rightIcon}</div>}
+      </Button>
     </div>
   )
 }
 
-export default Button
+export default Customebutton

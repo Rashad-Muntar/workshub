@@ -1,10 +1,11 @@
-import Button from './button'
+import Customebutton from './button'
+// import { Button } from '@chakra-ui/react'
+import Image from 'next/image'
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai'
 import { BiBookmark } from 'react-icons/bi'
 import { FiGlobe } from 'react-icons/fi'
-import { Box, GridItem, useMediaQuery } from '@chakra-ui/react'
+import { Box, Flex, Text, GridItem, useMediaQuery } from '@chakra-ui/react'
 import { connectHits } from 'react-instantsearch-dom'
-
 
 interface Props {
   title: string
@@ -29,47 +30,78 @@ const JobCard = ({
   minSalary,
   maxSalary,
   remote,
-  role
+  role,
 }: Props) => {
-  let locationStyles =
-    'bg-primary-100 text-primary-default  font-medium m-0.5 px-1'
+  let tagsStyles =
+    'bg-primary-100 text-primary-default box-content text-[11px] m-0.5 p-1'
   let remoteStyles =
     'bg-secondary-100 items-center text-secondary-default px-2 font-medium m-0.5'
 
-    const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)')
+  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)')
 
   return (
-    <GridItem colSpan={isLargerThan1024 ? 1 : 2} bg="primary.white" p="24px" borderRadius="8px" className="flex flex-col justify-between h-[100%] w-[100%]">
-      <Box className=" flex">
-        <Box className="mr-6">
-          <img src={logo} alt="" className="w-12 rounded-[4px]" />
+    <GridItem
+      colSpan={isLargerThan1024 ? 1 : 2}
+      bg="primary.white"
+      p="24px"
+      borderRadius="8px"
+      className="flex flex-col justify-between h-[100%] w-[100%] drop-shadow-md"
+    >
+      <Flex>
+        <Box
+          mr="15px"
+          w="48px"
+          h="48px"
+          minH="48px"
+          minW="48px"
+          position="relative"
+        >
+          <Image
+            src={logo}
+            className="absolute w-12 rounded-[4px]"
+            alt="job image"
+            layout="fill"
+          />
         </Box>
 
         <Box>
-          <p className="card-title">{title}</p>
-          <small>
+          <Text
+            textAlign="center"
+            noOfLines={1}
+            fontWeight="bold"
+            fontSize="18px"
+          >
+            {title}
+          </Text>
+          <Text fontSize="sm" noOfLines={1}>
             {name}, {country}
-          </small>
+          </Text>
         </Box>
-      </Box>
-      
-      <Box className="mt-[16px]">
-        <Box className="flex flex-wrap">
-          {tags?.map((tag) => (
-            <Button title={tag.label} styles={locationStyles} />
-          ))}
-        </Box>
+      </Flex>
 
-        <Box className="w-full mt-[16px]">
-          <small className="description">
+      <Box className="mt-[16px]">
+        <Flex wrap="wrap">
+          {tags?.map((tag) => (
+            <Customebutton
+              title={tag.label.toUpperCase()}
+              styles="m-[1.5px]"
+              color="primary.default"
+              size="small"
+              variant="primarySmall"
+            />
+          ))}
+        </Flex>
+
+        <Box w="100%" mt="16px">
+          <Text fontSize="xs" noOfLines={2}>
             {description?.substring(0, 90)}
-          </small>
+          </Text>
         </Box>
       </Box>
 
       <Box className="">
         <Box className="flex  w-[90%] flex-wrap">
-          <p className='font-semibold'>
+          <p className="font-semibold">
             ${minSalary}-{maxSalary} + Equity
           </p>
           <Box className="flex items-center px-3">
@@ -85,9 +117,11 @@ const JobCard = ({
         </Box>
         <Box className="flex flex-wrap my-3">
           {remote === true && (
-            <Button
+            <Customebutton
+              size="small"
+              variant="secondarySmall"
+              color="secondary.default"
               title="Remote"
-              styles={remoteStyles}
               leftIcon={<FiGlobe />}
             />
           )}
@@ -97,13 +131,16 @@ const JobCard = ({
         <Box className="flex justify-between items-center">
           <BiBookmark className="w-[23px] h-[23px]" />
           <Box className="flex ">
-            <Button
+            <Customebutton
+              size="medium"
+              variant="secondary"
               title="More info"
-              styles="border-primary-default border-[1px] hover:bg-primary-100 text-primary-default px-[0.8rem] rounded-sm py-[.4rem]"
             />
-            <Button
+            <Customebutton
+              size="medium"
+              variant="primary"
               title="Apply"
-              styles="border-primary-default border-[1px] bg-primary-default hover:bg-primary-100 hover:text-primary-default text-white px-[0.8rem] rounded-sm ml-4"
+              styles="ml-5"
             />
           </Box>
         </Box>

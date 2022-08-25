@@ -1,4 +1,4 @@
-import { useCheckbox, chakra, Flex, Text, Icon } from '@chakra-ui/react'
+import { useCheckbox,  chakra, Flex, Text, Icon } from '@chakra-ui/react'
 import { ImCheckmark } from 'react-icons/im'
 
 interface Props {

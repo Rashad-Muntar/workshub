@@ -17,6 +17,16 @@ body{
 
 .css-yy5vui {
   outline: 2px solid #ef8374 !important;
+  outline-offset: 0 !important;
+}
+
+.footerItems a{
+  font-weight: 500;
+}
+
+.Footer-links-wrapper a{
+  margin-bottom: 5px;
+  font-weight: 550;
 }
 
 .MyCustomSearchBox {
@@ -27,7 +37,7 @@ body{
 .ais-SearchBox-submitIcon,
 .ais-SearchBox-loadingIcon,
 .ais-SearchBox-reset {
-  display: none;
+  display: none !important;
 }
 
 .ais-SearchBox-input {
@@ -54,29 +64,27 @@ body{
   margin-top: 6px;
 }
 
-.description {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 16px;
+ .ais-Pagination-list {margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+ }
+
+
+ .ais-Pagination-item{margin: 0;
+  margin: 0 5px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 8%);
+  color: #454E54;
+ 
 }
 
-.card-title{
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-  min-height: 24px;
-  color: #454E54;
-  margin-bottom: 6px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.ais-Pagination-item--selected{
+  background-color: #454E54;
+  color: white;
 }
+
 
 

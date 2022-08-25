@@ -1,4 +1,6 @@
 import { extendTheme } from '@chakra-ui/react'
+// import { ButtonStyles as Button } from './styles/components/butttonStyles'
+import { overrides } from './styles/components/butttonStyles'
 
 export const theme = extendTheme({
   colors: {
@@ -14,9 +16,10 @@ export const theme = extendTheme({
       default: '#1aaea8',
       50: '#ebf5eb',
       100: '#DAF3F2',
-      500: '#5EA62E',     
+      500: '#5EA62E',
     },
     background: '#e6edf2',
     btnBg: '#454E54',
+    footer: '#6E7F89',
   },
-})
+}, overrides)

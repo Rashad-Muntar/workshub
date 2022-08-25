@@ -33,3 +33,18 @@ export const stacks = [
     "SQL",
     "POSTGRESQL"
 ]
+
+export const currency = [
+    "CHF",
+    "GBP",
+    "SEK",
+    "USD",
+    "PLN",
+    "INR",
+    "BTC",
+    "EUR",
+    "NOK",
+    "YEN",
+    "CAD",
+    "SGB",
+]
