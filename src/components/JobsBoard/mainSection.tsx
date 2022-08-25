@@ -7,7 +7,7 @@ const MainSection = () => {
   const [isLargerThan770] = useMediaQuery('(min-width: 770px)')
 
   return (
-    <Grid templateColumns="repeat(8, 1fr)" gap={4} className="w-[auto]">
+    <Grid templateColumns="repeat(8, 1fr)" gap={4}>
       <Show breakpoint="(min-width: 770px)">
         <GridItem colSpan={2}>
           <SideBar />

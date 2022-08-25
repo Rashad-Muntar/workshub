@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import CustomeHead from '../src/components/Head'
 import Navbar from '../src/components/layout/navbar'
 import styles from '../styles/Home.module.css'
-import Filters from '../src/components/shared/filters'
+import Filters from '../src/components/JobsBoard/filters'
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch } from 'react-instantsearch-hooks-web'
 import MainSection from '../src/components/JobsBoard/mainSection'
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <>
       <CustomeHead title="Jobsboard | Functional works functional.works-hub.com/" />
-      <Box className={styles.container}>
+      {/* <Box width="100vw"> */}
         <InstantSearch searchClient={searchClient} indexName="jobs">
           <Navbar />
           <main className={styles.main}>
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
           </main>
         </InstantSearch>
         <Footer />
-      </Box>
+      {/* </Box> */}
     </>
   )
 }

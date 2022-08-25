@@ -13,7 +13,7 @@ import CheckboxCard from '../shared/checkbox'
 const SideBar = () => {
 
   return (
-    <Box bg="primary.white" py="20px" px="16px" borderRadius="8px">
+    <Box bg="text.white" py="20px" px="16px" borderRadius="8px">
       <Box mb="32px">
         <Flex mb="16px" justify="space-between">
           <Text fontWeight="semibold" fontSize="16px">
@@ -47,7 +47,7 @@ const SideBar = () => {
               title={stack}
               styles="m-0.5 opacity-30"
               key={index}
-              color="primary.default"
+              color="text.primaryPink"
               size="small"
               variant="primarySmall"
             />
@@ -73,8 +73,8 @@ const SideBar = () => {
             <Customebutton
               title={location}
               key={index}
-              styles="m-0.5 opacity-30"
-              color="secondary.default"
+              styles="m-0.5 opacity-30 bg-background-primaryGreen2"
+              color="text.primaryGreen2"
               size="small"
               variant="secondarySmall"
             />
@@ -85,11 +85,11 @@ const SideBar = () => {
       <Flex mb="32px" direction="column">
         <CheckboxCard
           placeholder="Remote"
-          icon={<FiGlobe className="text-secondary-default" />}
+          icon={<FiGlobe className="text-text-primaryGreen" />}
         />
         <CheckboxCard
           placeholder="Sponsorship offered"
-          icon={<TbCertificate2 className="text-secondary-default" />}
+          icon={<TbCertificate2 className="text-text-primaryGreen" />}
         />
       </Flex>
 

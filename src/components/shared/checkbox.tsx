@@ -28,7 +28,7 @@ const CheckboxCard = ({ placeholder, icon }: Props) => {
           alignItems="center"
           justifyContent="center"
           border="1px solid"
-          borderColor={state.isChecked ? 'primary.default' : 'background'}
+          borderColor={state.isChecked ? 'text.primaryPink' : 'background.primaryBg'}
           w={4}
           h={4}
           {...getCheckboxProps()}
@@ -38,7 +38,7 @@ const CheckboxCard = ({ placeholder, icon }: Props) => {
               as={ImCheckmark}
               w={3}
               h={3}
-              color="primary.default"
+              color="text.primaryPink"
               fontWeight="5px"
             />
           )}

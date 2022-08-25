@@ -4,7 +4,7 @@ interface Props {
   title?: string
   handler?: () => void
   styles?: string
-  leftIcon?: string
+  leftIcon?: string | undefined
   rightIcon?: string
   size?: string
   variant?: string
@@ -22,6 +22,7 @@ const Customebutton = ({
   leftIcon,
   rightIcon,
 }: Props) => {
+  console.log(typeof leftIcon)
   return (
     <div className={styles}>
       <Button
@@ -29,10 +30,10 @@ const Customebutton = ({
         variant={variant}
         size={size}
         onClick={handler}
-        w="100%"
+        // w="100%"
       >
         {leftIcon && <div className="mr-1 text-[16px] text-xl">{leftIcon}</div>}
-        {title?.toUpperCase()}
+        {title}
         {rightIcon && <div>{rightIcon}</div>}
       </Button>
     </div>

@@ -2,13 +2,13 @@ import { AiOutlineFileText, AiOutlineUnorderedList } from 'react-icons/ai'
 import { BsGrid } from 'react-icons/bs'
 import { BiBot, BiBookmark } from 'react-icons/bi'
 import { FiFilter } from 'react-icons/fi'
-import Customebutton from './button'
+import Customebutton from '../shared/button'
 
 const Filters = () => {
   const blackBtnFilters =
-    'sm:rounded-md rounded-2xl bg-primary-text mr-3 sm:mr-0 text-white  flex items-center my-1 h-10 px-6 font-semibold'
+    'sm:rounded-md mb-2 rounded-2xl mr-3 sm:mr-0 font-semibold'
   const whiteBtnFilters =
-    'sm:rounded-md rounded-2xl rounded-md bg-white whitespace-nowrap my-1 flex items-center h-10 px-6 py-2.5 font-semibold'
+    'sm:rounded-md rounded-2xl rounded-md mb-2 whitespace-nowrap font-semibold'
 
   return (
     <div className="w-full flex justify-between mb-6">
@@ -24,45 +24,36 @@ const Filters = () => {
           variant="secondaryWhite"
           title="Recommended Jobs"
           color="btnBg"
-          styles={`${whiteBtnFilters} mx-0 sm:mx-3 md:mr-6 text-primary-text`}
+          // styles='mx-0 sm:mx-3 md:mr-6'
+          styles={`${whiteBtnFilters} mx-0 sm:mx-3 md:mr-6`}
           leftIcon={<BiBot />}
         />
         <Customebutton
           variant="secondaryWhite"
           color="btnBg"
           title="Saved jobs"
-          styles={`${whiteBtnFilters} mr-3 text-primary-text`}
+          styles={`${whiteBtnFilters} mr-3`}
           leftIcon={<BiBookmark />}
         />
         <Customebutton
           variant="secondaryWhite"
           color="btnBg"
           title="Applied to"
-          styles={`${whiteBtnFilters} mr-3 text-primary-text`}
+          styles={`${whiteBtnFilters} mr-3`}
           leftIcon={<AiOutlineFileText />}
         />
         <Customebutton
           variant="primary"
           color="white"
           title="Filters"
-          styles={`${whiteBtnFilters} inline-flex sm:hidden bg-primary-default`}
+          styles={`${whiteBtnFilters} inline-flex sm:hidden`}
           leftIcon={<FiFilter />}
         />
       </div>
 
-      <div className="flex hidden sm:inline-flex">
-        <Customebutton
-          variant="secondaryWhite"
-          color="btnBg"
-          styles="flex items-center h-10 px-3 py-2.5 font-semibold"
-          leftIcon={<AiOutlineUnorderedList />}
-        />
-        <Customebutton
-          variant="secondaryWhite"
-          color="btnBg"
-          styles="bg-white text-primary-text flex items-center h-10  px-3 py-2.5 font-semibold"
-          leftIcon={<BsGrid />}
-        />
+      <div className="flex hidden sm:inline-flex bg-text-white box-boarder h-[40px] items-center p-0 m-0">
+        <AiOutlineUnorderedList fontSize="25px" fontWeight="bold"  className='mx-3 p-0'/>
+        <BsGrid className='mx-3' fontSize="25px" />
       </div>
     </div>
   )

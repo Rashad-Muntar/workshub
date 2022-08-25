@@ -10,16 +10,17 @@ import logo from '../../../public/footer.svg'
 
 const Footer = () => {
   const [isLargerThan1008] = useMediaQuery('(min-width: 1008px)')
+  const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
 
   const currentYear = new Date().getFullYear()
   return (
-    <Box bg="footer" h="100%" minH="534px" pt="40px" color="primary.white">
+    <Box bg="background.footer" h="100%" minH="534px" pt="40px" color="text.white">
       <Flex justify="space-between" px={isLargerThan1008 ? "40px" : "15px"}>
         <Box>
           <Flex mb={isLargerThan1008 ? "58px" : "28px"} alignItems="center">
             <TbBallFootball
               fontSize={47}
-              className="text-primary-default"
+              className="text-text-primaryPink"
             />
             <Text fontSize="18px" fontWeight="bold" ml="8px">
               Workshub

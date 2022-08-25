@@ -1,16 +1,18 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body{
-  color: #728088 !important;
+body {
+  color: #4a4a4a !important;
   background-color: #e6edf2 !important;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .5px;
 }
+
 .css-us0ay6 {
   background: #ef8374 !important;
 }
@@ -20,18 +22,18 @@ body{
   outline-offset: 0 !important;
 }
 
-.footerItems a{
+.footerItems a {
   font-weight: 500;
 }
 
-.Footer-links-wrapper a{
+.Footer-links-wrapper a {
   margin-bottom: 5px;
   font-weight: 550;
 }
 
 .MyCustomSearchBox {
   display: flex;
-  white-space: nowrap;
+  border-radius: 8px !important;
 }
 
 .ais-SearchBox-submitIcon,
@@ -64,27 +66,25 @@ body{
   margin-top: 6px;
 }
 
- .ais-Pagination-list {margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
- }
+.ais-Pagination-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
 
-
- .ais-Pagination-item{margin: 0;
+.ais-Pagination-item {
+  margin: 0;
   margin: 0 5px;
   background-color: white;
   padding: 5px 10px 5px 10px;
   box-shadow: 0 4px 8px rgb(0 0 0 / 8%);
-  color: #454E54;
- 
+  color: #454e54;
 }
 
-.ais-Pagination-item--selected{
-  background-color: #454E54;
+.ais-Pagination-item--selected {
+  background-color: #454e54;
   color: white;
 }
-
-
-
